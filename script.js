@@ -2,35 +2,29 @@ let skills = JSON.parse(localStorage.getItem("skills")) || [];
 
 function addSkill() {
     let skill = document.getElementById("skill").value;
-    if (skill === "") return;
+    if (!skill) return;
 
-    let id = "SKILL-" + Math.floor(Math.random() * 10000);
-
-    skills.push({ skill, id });
+    skills.push(skill);
     localStorage.setItem("skills", JSON.stringify(skills));
 
-    displaySkills();
+    renderChart();
 }
 
-function displaySkills() {
-    let list = document.getElementById("skillsList");
-    if (!list) return;
+function renderChart() {
+    let ctx = document.getElementById("myChart");
 
-    list.innerHTML = "";
-    skills.forEach(s => {
-        list.innerHTML += `<div class="card">${s.skill} - ID: ${s.id}</div>`;
+    if (!ctx) return;
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: skills,
+            datasets: [{
+                label: 'Skill Progress',
+                data: skills.map(() => Math.floor(Math.random()*100))
+            }]
+        }
     });
 }
 
-function verifySkill() {
-    let input = document.getElementById("verifyInput").value;
-    let found = skills.find(s => s.id === input);
-
-    if (found) {
-        document.getElementById("result").innerText = "✅ Verified Skill: " + found.skill;
-    } else {
-        document.getElementById("result").innerText = "❌ Skill Not Found";
-    }
-}
-
-displaySkills();
+renderChart();

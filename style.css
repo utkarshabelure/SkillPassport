@@ -1,45 +1,82 @@
 body {
     margin: 0;
-    font-family: Arial;
-    background: #0f172a;
+    font-family: 'Segoe UI';
+    background: linear-gradient(135deg, #0b1220, #020617);
     color: white;
-    text-align: center;
 }
 
-nav {
+/* NAVBAR */
+.navbar {
     display: flex;
     justify-content: space-between;
-    padding: 15px;
-    background: #1e293b;
+    padding: 20px;
+    backdrop-filter: blur(10px);
 }
 
-nav a {
-    color: white;
-    margin: 10px;
+.nav-links a {
+    margin: 15px;
     text-decoration: none;
+    color: #cbd5f5;
 }
 
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
 .hero {
-    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
 }
 
-button {
-    padding: 10px 20px;
-    background: #6366f1;
+.hero-text h1 {
+    font-size: 60px;
+}
+
+.hero-text span {
+    background: linear-gradient(to right, #38bdf8, #22c55e);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #3b82f6, #06b6d4);
     border: none;
-    border-radius: 10px;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
 }
 
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* HERO CARD */
+.hero-card {
+    width: 420px;
+    height: 260px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #38bdf8, #06b6d4);
+    box-shadow: 0 0 40px rgba(56,189,248,0.5);
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* CARD */
 .card {
-    background: #1e293b;
+    background: rgba(255,255,255,0.05);
     padding: 20px;
     margin: 20px;
     border-radius: 15px;
-}
-
-.features {
-    display: flex;
-    justify-content: center;
+    backdrop-filter: blur(10px);
 }

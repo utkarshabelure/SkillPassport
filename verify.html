@@ -1,39 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Verify Skill</title>
+<title>Verify</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav class="navbar">
-    <div class="logo">⚡ SkillPassport</div>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="learning.html">Learning</a>
-        <a href="profile.html">Passport</a>
-    </div>
+<div class="logo">SkillPassport</div>
+<a href="index.html">Home</a>
 </nav>
 
-<section style="text-align:center; padding: 60px;">
-
-<h1>🔐 Verify Skill Credential</h1>
-<p>Enter Skill ID to verify authenticity</p>
+<h1 style="text-align:center;">Verify Skill</h1>
 
 <div class="card">
-
-    <input id="verifyId" placeholder="Enter Skill ID (e.g. SK-1234)">
-    <br><br>
-
-    <button class="btn" onclick="verifySkill()">Verify Now</button>
-
+<input id="verifyId" placeholder="Enter Skill ID">
+<button class="btn" onclick="verifySkill()">Verify</button>
 </div>
 
 <div id="resultCard" class="card" style="display:none;"></div>
-
-</section>
 
 <script src="script.js"></script>
 

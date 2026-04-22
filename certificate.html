@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Certificate</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="logo">SkillPassport</div>
+<a href="dashboard.html">Dashboard</a>
+</nav>
+
+<h1 style="text-align:center;">🎓 Certificate</h1>
+
+<div id="certificate" class="certificate">
+<h2>Skill Passport Certificate</h2>
+
+<p>This certifies that</p>
+<h1>User</h1>
+
+<p>has demonstrated skill in</p>
+<h2 id="certSkill"></h2>
+
+<p>ID: <span id="certId"></span></p>
+<p>Date: <span id="certDate"></span></p>
+</div>
+
+<div style="text-align:center;">
+<button class="btn" onclick="downloadCertificate()">Download</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
